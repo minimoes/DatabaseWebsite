@@ -1,0 +1,57 @@
+
+.Schoollogo {
+    background-color:cadetblue;
+    display:flex;
+    flex-direction:row; 
+ }
+
+ .Schoollogo img {
+    margin:auto;
+    padding:30px;
+    width:500px;
+
+ }
+
+ .feature .mobile {
+    display: none;
+}
+/*
+@media screen and (max-width: 1830px) {
+    .feature .mobile {
+        display:inline-block;
+    }
+    .feature .Desktiop {
+        display: none;
+    }
+
+}*/
+
+.feature {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.feature img {
+    margin:auto 12.5px auto 15%;
+    width:450px;
+    padding:20px;
+
+}
+
+
+
+h1 {
+    background-color: bisque;
+    text-align: center;
+    text-transform: uppercase;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+    padding:20px;
+
+}
+p {
+    margin:auto 15px auto 10px;
+    text-transform: uppercase;
+    color:crimson;
+}

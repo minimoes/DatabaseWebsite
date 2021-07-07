@@ -1,0 +1,34 @@
+
+.features {
+    background-color: white;
+    margin: 5% 15%;
+    padding:20px;
+    display: flex;
+    flex-direction:row;
+    border-radius: 50px;
+    flex-wrap: wrap;
+}
+
+.features figure  {
+    margin:auto 75px auto 100px;
+    text-align: center;
+    text-transform: uppercase;
+    width:400px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+}
+
+
+.features figure img {
+    border-radius:100%;
+    width:400px;
+    box-shadow: 0 0 50px ;
+}
+
+
+p {
+    display: inline-block;
+    text-align:center;
+    margin:auto auto auto 0;
+    padding:20px;
+}

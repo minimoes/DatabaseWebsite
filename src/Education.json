@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Solidworks logo",
+        "Img": "/public/Images/Solidworks Logo.png"
+    },
+    {
+        "name": "Fusion 360 logo",
+        "Img": "/public/Images/fusion-logo.png"
+    },
+    {
+        "name": "Motorbike",
+        "Img": "/public/Images/Bike's Render View.jpg"
+    }
+    
+    ]

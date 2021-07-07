@@ -1,0 +1,81 @@
+
+h1 {
+    background: bisque;
+    color: black;
+    padding:20px;
+    display: block;
+    text-align: center;
+    font-size:xx-large
+ }
+
+ .mechlogos {
+    background-color:cadetblue;
+    display: flex;
+    flex-direction: row;
+ }
+.mechlogos img {
+     height:200px;
+     margin:auto;
+ }
+
+ .mechProjects {
+    background-color:cadetblue;
+    display: flex;
+    display: row;
+ }
+ .mechProjects figure  {
+    margin:auto;
+    text-align: center;
+    text-transform: uppercase;
+    width:400px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+    height: 450px;
+}
+
+ .mechProjects img {
+    width: 400px;
+ }
+ .mechProjects .milk img{
+    height: 350px;
+ }
+
+ .software {
+    background-color:cadetblue;
+    display: flex;
+    display: row;
+ }
+.software img { 
+     margin:auto;
+     padding:20px;
+     width:450px;
+ }
+
+ .codeProjects {
+    background-color:cadetblue;
+    display: flex;
+    display: row;
+
+ }
+
+ .codeProjects figure  {
+    margin:auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+    width: 500px;
+}
+.codeProjects img {
+    height:300px
+
+}
+
+ .codeProjects video  {
+    margin:auto;
+    padding:20px;
+ }
+footer{
+    padding:20px;
+}
+
