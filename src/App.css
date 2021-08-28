@@ -1,31 +1,39 @@
-
-
 .navigation .nav-list {
     margin:0;
     padding: 0;
     list-style-type: none;
 }
+
+
+
+
 .navigation li {
     display: inline-block;
     margin-right: 20px;
     border-radius: 3px;
     padding: 2px;
 }
-.navigation .activeLink {
-    text-decoration: none;
+
+
+ .hob, .edu, .home, .project {
+       text-decoration: none;
     color:white;
     font-family: "Lucida Console", "Courier New", monospace;
     font-size:30px;
     text-transform: uppercase;
-    margin-top: 40px;
+    margin-top: 40px; 
+} 
+.activeLink {
+    color:blue;
 }
-.navigation .activeLink:hover {
+
+.activeLink:hover {
     text-decoration: underline;
 }
 
 .background {
-    background-color: black;
-    background-image: url("./Img/Cherry\ blossom.jpg");
+    background-color: grey;
+    /*background-image: url("./Img/Cherry\ blossom.jpg");*/
     padding:50px;
     background-size:100%;
     background-position: center;

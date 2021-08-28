@@ -8,6 +8,25 @@ h1 {
     font-size:xx-large
  }
 
+
+.solid, .fusion,.bike,.milk,.python,.matlab,.vase {
+     height:200px;
+     margin:auto;
+ }
+
+ .projectHead {
+    background-color:cadetblue;
+    display: flex;
+     }
+
+footer{
+    padding:20px;
+}
+.project-text {
+   text-align: center;
+}
+
+/*
  .mechlogos {
     background-color:cadetblue;
     display: flex;
@@ -78,4 +97,4 @@ h1 {
 footer{
     padding:20px;
 }
-
+*/

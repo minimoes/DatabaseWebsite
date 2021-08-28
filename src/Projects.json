@@ -1,7 +1,7 @@
 [
     {
         "name": "Solidworks logo",
-        "Img": "Images/Solidworks Logo.png"
+        "Img": "Images/SolidworksLogo.png"
     },
     {
         "name": "Fusion 360 logo",
@@ -9,26 +9,22 @@
     },
     {
         "name": "Motorbike",
-        "Img": "Images/Bike's Render View.jpg"
+        "Img": "Images/BikeRenderView.jpg"
     },
     {
         "name": "milk cartoon",
-        "Img": "Images/Milk cartoon.png"
+        "Img": "Images/Milkcartoon.png"
     },
     {
         "name": "python logo",
-        "Img": "Images/Python Logo.png"
+        "Img": "Images/PythonLogo.png"
     },
     {
         "name": "matlab logo",
-        "Img": "Images/matlab logo.png"
+        "Img": "Images/matlablogo.png"
     },
     {
         "name": "Julia Vase",
-        "Img": "Images/JuliaVase Render.PNG"
-    },
-    {
-        "name": "python logo",
-        "Img": "Images/Python Logo.png"
+        "Img": "Images/JuliaVaseRender.PNG"
     }
 ]

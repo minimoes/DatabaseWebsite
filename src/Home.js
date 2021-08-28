@@ -16,6 +16,9 @@ class Home extends Component {
                     <p>My name is Tyler and this website is a little about me</p>
 
                 </section>
+                <input>as</input>
+                <button> asdas</button>
+                <span>asda</span>
 
             </div>
         );

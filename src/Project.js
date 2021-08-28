@@ -1,14 +1,55 @@
 import React, { Component } from 'react';
-import Items from './Projects.json';
 import './Project.css';
 
 class Project extends Component {
 
+    constructor() {
+        super();
+        this.state = {lists: []}
+    }
+        componentDidMount() {
+            fetch(" http://127.0.0.1:5000/project").then((res) => res.json())
+                .then((data) => {
+                    this.setState({ lists: data });
+                    console.log(this.state.lists)
+                })
+    }
+
     render() {
         return <div > <main>
             <h1> Mechanical Projects</h1>
-            <ProjectList items={Items}/>
-            {/*}
+            <ProjectList items={this.state.lists}/>
+ 
+        </main></div >;
+    }
+    }
+
+class ProjectList extends Component {
+    render() {
+    let Cards = this.props.items.map((single) => {
+        return <ProjectItems key={single.name} items={single} />
+    });
+    return (
+    <div> {Cards} </div>
+    );
+}
+}
+class ProjectItems extends Component {
+
+    render() {
+        let work = this.props.items;
+        return (
+            <div className="projectHead">
+                <img className={work.classTitle} src={work.Img} alt={work.name} />
+                    <p className="project-text">{work.name}</p>
+            </div >
+        );
+    }
+}
+
+export default Project;
+
+/*}
             <section className="mechlogos">
                 <img src="Images/Solidworks Logo.png" alt="Solidworks logo" />
                 <img src="Images/fusion-logo.png" alt="Fusion 360 logo" />
@@ -38,39 +79,4 @@ class Project extends Component {
                 </figure>
                 <video src="Images/DoublePendulum.mp4" controls width="500" ></video>
             </section>
-    */}
-        </main></div >;
-    }
-}
-
-class ProjectList extends Component {
-    render() {
-    let Cards = this.props.items.map((single) => {
-        return <ProjectItems items={single} />
-    });
-    return (<div> {Cards} </div>
-    );
-}
-}
-
-
-class ProjectItems extends Component {
-
-    render() {
-        let work = this.props.items;
-        return (
-            <div className="projectHead">
-                <img className="proj-img-top" src={work.Img} alt={work.name} />
-                <div className="proj-body">
-                    <p className="project-text">{work.name}</p>
-                </div>
-            </div >
-        );
-    }
-}
-
-
-
-
-
-export default Project;
+    */

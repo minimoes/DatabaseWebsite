@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start-flask-api": "cd api && venv/Scripts/flask  run",
+    "start-api": "cd api && flask run --no debugger",
     "build": "react-scripts build",
     "test-api": "cd api && flask test",
     "test": "react-scripts test",
@@ -42,5 +42,10 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://127.0.0.1:5000/"
+  "proxy": "http://localhost:5000/",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
 }
