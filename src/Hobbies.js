@@ -4,6 +4,56 @@ import './Hobbies.css';
 
 export default class Hobbies extends Component {
 
+
+    constructor() {
+        super();
+        this.state = { origin: [] };
+    }
+
+
+    turnOff() {
+        fetch(" http://127.0.0.1:5000/switch", {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "status": "off"
+            })
+
+        }).then((res) => res.text())
+            .then((data) => { 
+            this.setState({origin: data})
+            console.log(data)
+            });
+    }
+
+    turnOn() {
+        fetch(" http://127.0.0.1:5000/switch", {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "status": "on"
+            })
+
+        }).then((res) => res.text())
+            .then((data) =>  {
+            this.setState({ origin: data})
+            console.log(data)
+            });
+
+    }
+    render() {
+        return (
+            <div>
+                <div><p>machine is: {this.state.origin}</p></div>
+                <button type='button' onClick={() => this.turnOff()}>Off</button>
+                <button type='button' onClick={() => this.turnOn()}>On</button>
+            </div>
+        )}
+/*
     render() {
         return <div>        <main>
 
@@ -18,5 +68,5 @@ export default class Hobbies extends Component {
             </div>
 
         </main></div>;
-    }
+    }*/
 }

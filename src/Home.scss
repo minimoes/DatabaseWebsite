@@ -1,0 +1,72 @@
+
+/* need to compile sass in terminal: 
+    sass Home.scss:NewHome.css
+    (name of the file which need to be converted to css)
+
+    to Constantly compile with changes:
+    need to compile sass in terminal:
+    sass --watch Home.scss:NewHome.css
+
+
+    Nested css inside css
+
+    div {
+        font-size:18px;
+        p {
+            color: blue
+        }
+        ul {
+            color:green;
+        }
+    }
+
+    //import a scss file to another file 
+    @import ".header"
+
+    //functions in sass
+
+    //add parameteres
+    @mixin flex($direction) {
+        flex-direction: $direction;
+    }
+
+    @include flex(row);
+
+*/
+$color: green;
+$size: 100px;
+
+.features {
+    background-color: white;
+    margin: 5% 15%;
+    padding:20px;
+    display: flex;
+    flex-direction:row;
+    border-radius: $size;
+    flex-wrap: wrap;
+}
+
+.features figure  {
+    margin:auto 75px auto 100px;
+    text-align: center;
+    text-transform: uppercase;
+    width:400px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+}
+
+
+.features figure img {
+    border-radius:100%;
+    width:400px;
+    box-shadow: 0 0 $size;
+}
+
+
+p {
+    display: inline-block;
+    text-align:center;
+    margin:auto auto auto 0;
+    padding:20px;
+    color:$color;
+}

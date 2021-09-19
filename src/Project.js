@@ -11,7 +11,8 @@ class Project extends Component {
             fetch(" http://127.0.0.1:5000/project").then((res) => res.json())
                 .then((data) => {
                     this.setState({ lists: data });
-                    console.log(this.state.lists)
+                }).catch((error) => {
+                    console.log("Error", error);
                 })
     }
 

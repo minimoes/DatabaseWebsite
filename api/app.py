@@ -14,11 +14,24 @@ app = Flask(__name__)
 
 CORS(app, resources={r"/*": {"origins": "*"}})
 
+
+import os
+from flask import send_from_directory
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 task = [{
 
         "hi": "you",
         "go": "do"
 }]
+
+light = [{
+        "status": "good"
+        }]
+
 
 @app.route('/', methods=['GET'])
 @cross_origin(origin="*")
@@ -42,6 +55,53 @@ def api():
     #return jsonify(task)
     return jsonify(h)
 
+@app.route('/table', methods=['GET'])
+@cross_origin(origin="*")
+def tableInfo():
+    return 'tables'
+
+@app.route('/table', methods=['POST'])
+@cross_origin(origin="*")
+def tableAdd():
+    title = request.json['table']
+    cursor.execute(f"CREATE TABLE {title} (names text)")
+    conn.commit()
+    return jsonify({'status': 'add'})
+
+
+@app.route('/table', methods=['DELETE'])
+@cross_origin(origin="*")
+def tableDelete():
+    title = request.json['table']
+    cursor.execute(f"DROP TABLE {title}")
+    conn.commit()
+    return jsonify({'status': 'deleted'})
+
+
+@app.route('/form', methods=['GET'])
+@cross_origin(origin="*")
+def FormInfo():
+    return 'forms'
+
+@app.route('/form', methods=['POST'])
+@cross_origin(origin="*")
+def formAdd():
+    title = request.json
+    cursor.execute("INSERT INTO {} VALUES (\'{}\',\'{}\',\'{}\')".format(title['UsedTable'],
+    title['name'], title['password'], title['date']))
+    conn.commit()
+    return jsonify({'status': 'Row_add'})
+
+
+@app.route('/form', methods=['DELETE'])
+@cross_origin(origin="*")
+def formDelete():
+    title = request.json
+    cursor.execute("DELETE FROM {} WHERE 'name' = {}".format(
+        title['UsedTable'], title['name']))
+    conn.commit()
+    return jsonify({'status': 'Row_deleted'})
+
 
 @app.route('/project', methods=['GET'])
 @cross_origin(origin="*")
@@ -59,6 +119,52 @@ def project():
         h.append(a)
         a = {}
     return jsonify(h)
+
+
+
+
+
+
+
+
+
+
+@app.route('/a', methods=['PUT'])
+@cross_origin(origin="*")
+#supports_credentials=True)
+def api2():
+    boy2 = request.json['hi']
+    task[0]['hi'] = boy2
+    return "nice:)"
+
+@app.route('/a', methods=['GET'])
+@cross_origin(origin="*")
+def projectq():
+
+    return jsonify(task)
+
+
+@app.route('/a', methods=['POST'])
+@cross_origin(origin="*")
+def api1():
+    boy1 = request.json['do']
+    print(request.json)
+    task.append({'yo': boy1})
+    return jsonify(task)
+
+
+@app.route('/a', methods=['DELETE'])
+@cross_origin(origin="*")
+#supports_credentials=True)
+def api3():
+    boy2 = request.json['hi']
+    print(type(boy2))
+
+    task[0].pop('hi')
+    return jsonify(task)
+
+
+
 
 '''
 api()
