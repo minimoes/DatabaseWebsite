@@ -3,8 +3,7 @@ from flask import Flask,jsonify,request,make_response,abort
 from flask_cors import CORS, cross_origin
 import pyodbc
 import json
-#import RPi.GPIO as GPIO
-#import time
+
 
 conn = pyodbc.connect("DRIVER={SQL Server}; Server=.\SQLEXPRESS; Database=PersonalBio/Home; Trusted_Connection=yes;")
 
@@ -20,7 +19,7 @@ task = [{
         "go": "do"
 }]
 
-light = [{
+light = [{ 
         "status": "good"
         }]
 
