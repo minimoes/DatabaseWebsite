@@ -50,7 +50,7 @@ class Home extends Component {
                     
 
                 </section>
-
+            {/*
                 <button type="submit" onClick={this.submity}> submit</button>
 <div>{this.state.origin.map((item) => {
                 return (
@@ -63,7 +63,7 @@ class Home extends Component {
                 );
                 })}</div>
 
-
+*/}
 
             </div>
         );
